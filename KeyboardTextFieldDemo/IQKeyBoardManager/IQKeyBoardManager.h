@@ -27,7 +27,8 @@
 /*****************IQKeyBoardManager***********************/
 @interface IQKeyBoardManager : NSObject
 {
-    //Boolean to maintain keyboard is showing or it is hide. To solve rootViewController.view.frame calculations;
+    //Boolean to maintain keyboard is showing or it is hide.
+    //To solve rootViewController.view.frame calculations;
     BOOL isKeyboardShowing;
     
     //To save rootViewController.view.frame.
@@ -44,10 +45,12 @@
 +(void)installKeyboardManager;
 
 //To set keyboard distance from textField
-+(void)setTextFieldDistanceFromKeyboard:(CGFloat)distance;  /*can't be less than zero. Default is 10.0*/
++(void)setTextFieldDistanceFromKeyboard:(CGFloat)distance;
+/*can't be less than zero. Default is 10.0*/
 
 //Enable keyboard manager.
-+(void)enableKeyboardManger;    /*default enabled*/
++(void)enableKeyboardManger;
+/*default enabled*/
 
 //Desable keyboard manager.
 +(void)disableKeyboardManager;
@@ -84,4 +87,3 @@
 -(id)initWithTarget:(id)target previousSelector:(SEL)pSelector nextSelector:(SEL)nSelector;
 
 @end
-

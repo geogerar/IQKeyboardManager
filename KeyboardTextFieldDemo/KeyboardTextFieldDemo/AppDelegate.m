@@ -7,6 +7,7 @@
 #import "AppDelegate.h"
 #import "IQKeyBoardManager.h"
 #import "ViewController.h"
+#import "TestViewController.h"
 
 @implementation AppDelegate
 
@@ -21,6 +22,7 @@
     // Override point for customization after application launch.
     
 
+#if 0
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
 
     //Case 1. UIViewController as rootViewController.
@@ -35,6 +37,11 @@
         [navController.navigationBar setTintColor:[UIColor clearColor]];
         self.window.rootViewController = navController;
     }
+#else 
+    TestViewController * testController = [[TestViewController alloc] initWithNibName:@"TestViewController" bundle:nil];
+    self.window.rootViewController = testController;
+    
+#endif
 
     [self.window makeKeyAndVisible];
     return YES;

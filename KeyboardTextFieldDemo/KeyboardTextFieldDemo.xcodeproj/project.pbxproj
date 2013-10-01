@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0FFD726117FB7CE600CDE729 /* StoryboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FFD726017FB7CE600CDE729 /* StoryboardViewController.m */; };
+		0FFD726317FB7D0300CDE729 /* StoryboardViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FFD726217FB7D0300CDE729 /* StoryboardViewController.storyboard */; };
 		AF4301BA179E92C400FADAC6 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF4301B9179E92C400FADAC6 /* Default-568h@2x.png */; };
 		AFF236C117CA224400760F6C /* IQKeyBoardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AFF236BE17CA224400760F6C /* IQKeyBoardManager.m */; };
 		C0B63BA01781FAB1008D3B64 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B63B9F1781FAB1008D3B64 /* UIKit.framework */; };
@@ -20,6 +22,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FFD725F17FB7CE600CDE729 /* StoryboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryboardViewController.h; sourceTree = "<group>"; };
+		0FFD726017FB7CE600CDE729 /* StoryboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryboardViewController.m; sourceTree = "<group>"; };
+		0FFD726217FB7D0300CDE729 /* StoryboardViewController.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = StoryboardViewController.storyboard; sourceTree = "<group>"; };
+		0FFD726417FB7DB400CDE729 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
 		AF4301B9179E92C400FADAC6 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AFF236BD17CA224400760F6C /* IQKeyBoardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQKeyBoardManager.h; sourceTree = "<group>"; };
 		AFF236BE17CA224400760F6C /* IQKeyBoardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQKeyBoardManager.m; sourceTree = "<group>"; };
@@ -93,12 +99,16 @@
 		C0B63BA51781FAB1008D3B64 /* KeyboardTextFieldDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0FFD726417FB7DB400CDE729 /* Log.h */,
 				C0B63BAE1781FAB1008D3B64 /* AppDelegate.h */,
 				C0B63BAF1781FAB1008D3B64 /* AppDelegate.m */,
 				C0B63BB11781FAB1008D3B64 /* ViewController.h */,
 				C0B63BB21781FAB1008D3B64 /* ViewController.m */,
 				C0FAECC717F2351700962F68 /* ViewController.xib */,
 				C0B63BA61781FAB1008D3B64 /* Supporting Files */,
+				0FFD725F17FB7CE600CDE729 /* StoryboardViewController.h */,
+				0FFD726017FB7CE600CDE729 /* StoryboardViewController.m */,
+				0FFD726217FB7D0300CDE729 /* StoryboardViewController.storyboard */,
 			);
 			path = KeyboardTextFieldDemo;
 			sourceTree = "<group>";
@@ -167,6 +177,7 @@
 			files = (
 				C0B63BAA1781FAB1008D3B64 /* InfoPlist.strings in Resources */,
 				AF4301BA179E92C400FADAC6 /* Default-568h@2x.png in Resources */,
+				0FFD726317FB7D0300CDE729 /* StoryboardViewController.storyboard in Resources */,
 				C0FAECC817F2351700962F68 /* ViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -180,6 +191,7 @@
 			files = (
 				C0B63BAC1781FAB1008D3B64 /* main.m in Sources */,
 				C0B63BB01781FAB1008D3B64 /* AppDelegate.m in Sources */,
+				0FFD726117FB7CE600CDE729 /* StoryboardViewController.m in Sources */,
 				C0B63BB31781FAB1008D3B64 /* ViewController.m in Sources */,
 				AFF236C117CA224400760F6C /* IQKeyBoardManager.m in Sources */,
 			);
@@ -269,7 +281,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KeyboardTextFieldDemo/KeyboardTextFieldDemo-Prefix.pch";
 				INFOPLIST_FILE = "KeyboardTextFieldDemo/KeyboardTextFieldDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
@@ -282,7 +294,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KeyboardTextFieldDemo/KeyboardTextFieldDemo-Prefix.pch";
 				INFOPLIST_FILE = "KeyboardTextFieldDemo/KeyboardTextFieldDemo-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;

@@ -7,6 +7,7 @@
 #import "AppDelegate.h"
 #import "IQKeyBoardManager.h"
 #import "ViewController.h"
+#import "StoryboardViewController.h"
 
 @implementation AppDelegate
 
@@ -18,9 +19,8 @@
     [IQKeyBoardManager installKeyboardManager];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    
-
+   
+#if 0
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
 
     //Case 1. UIViewController as rootViewController.
@@ -35,6 +35,12 @@
         [navController.navigationBar setTintColor:[UIColor clearColor]];
         self.window.rootViewController = navController;
     }
+#else
+    
+    UIStoryboard * storyboard = [UIStoryboard storyboardWithName:@"StoryboardViewController" bundle:nil];
+    StoryboardViewController * storyboardController = [storyboard instantiateViewControllerWithIdentifier:@"TestingStoryboard"];
+    self.window.rootViewController = storyboardController;
+#endif
 
     [self.window makeKeyAndVisible];
     return YES;

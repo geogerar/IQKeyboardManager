@@ -23,6 +23,7 @@
 
 
 #import "IQKeyBoardManager.h"
+#import "Log.h"
 
 //Singleton object.
 static IQKeyBoardManager *kbManager;
@@ -56,12 +57,14 @@ static IQKeyBoardManager *kbManager;
 
 +(void)setTextFieldDistanceFromKeyboard:(CGFloat)distance
 {
+    LOG("marker");
     //Setting keyboard distance.
     kbManager.keyboardDistanceFromTextField = MAX(distance, 0);
 }
 
 +(void)enableKeyboardManger
 {
+    LOG("marker");
     //registering for notifications if it is not enable already.
     if (kbManager.isEnabled == NO)
     {
@@ -109,6 +112,7 @@ static IQKeyBoardManager *kbManager;
 //Initialize only once
 -(id)init
 {
+    LOG("marker");
     if (self = [super init])
     {
         static dispatch_once_t onceToken;
@@ -126,6 +130,7 @@ static IQKeyBoardManager *kbManager;
 //Function to get topMost ViewController object.
 + (UIViewController*) topMostController
 {
+    LOG("marker");
     //Getting rootViewController
     UIViewController *topController = [UIApplication sharedApplication].keyWindow.rootViewController;
 
@@ -142,6 +147,7 @@ static IQKeyBoardManager *kbManager;
 //Helper function to manipulate RootViewController's frame with animation.
 -(void)setRootViewFrame:(CGRect)frame
 {
+    LOG("marker");
     //Getting topMost ViewController.
     UIViewController *controller = [IQKeyBoardManager topMostController];
     
@@ -156,6 +162,7 @@ static IQKeyBoardManager *kbManager;
 // Keyboard Will hide. So setting rootViewController to it's default frame.
 - (void)keyboardWillHide:(NSNotification*)aNotification
 {
+    LOG("marker");
     //Boolean to know keyboard is showing/hiding
     isKeyboardShowing = NO;
     
@@ -174,6 +181,7 @@ static IQKeyBoardManager *kbManager;
 //UIKeyboard Did shown. Adjusting RootViewController's frame according to device orientation.
 -(void)keyboardWillShow:(NSNotification*)aNotification
 {
+    LOG("marker");
     //Boolean to know keyboard is showing/hiding
     isKeyboardShowing = YES;
     
@@ -318,6 +326,7 @@ static IQKeyBoardManager *kbManager;
 //Fetching UITextField object from notification.
 -(void)textFieldDidBeginEditing:(NSNotification*)notification
 {
+    LOG("marker");
     //If keyboard is not showing(At the beginning only). We should save rootViewRect.
     if (isKeyboardShowing == NO)
     {
@@ -331,6 +340,7 @@ static IQKeyBoardManager *kbManager;
 //Removing fetched object.
 -(void)textFieldDidEndEditing:(NSNotification*)notification
 {
+    LOG("marker");
     textFieldView = nil;
 }
 
@@ -338,12 +348,14 @@ static IQKeyBoardManager *kbManager;
 //Fetching UITextView object from notification.
 -(void)textViewDidBeginEditing:(NSNotification*)notification
 {
+    LOG("marker");
     textFieldView = notification.object;
 }
 
 //Removing fetched object.
 -(void)textViewdDidEndEditing:(NSNotification*)notification
 {
+    LOG("marker");
     textFieldView = nil;
 }
 

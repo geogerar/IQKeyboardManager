@@ -22,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F597DB017FCC06C008A5138 /* Log.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Log.h; sourceTree = "<group>"; };
 		0FFD726517FB86C300CDE729 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		0FFD726617FB86C300CDE729 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		0FFD726717FB86C300CDE729 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
@@ -98,6 +99,7 @@
 		C0B63BA51781FAB1008D3B64 /* KeyboardTextFieldDemo */ = {
 			isa = PBXGroup;
 			children = (
+				0F597DB017FCC06C008A5138 /* Log.h */,
 				C0B63BAE1781FAB1008D3B64 /* AppDelegate.h */,
 				C0B63BAF1781FAB1008D3B64 /* AppDelegate.m */,
 				C0B63BB11781FAB1008D3B64 /* ViewController.h */,

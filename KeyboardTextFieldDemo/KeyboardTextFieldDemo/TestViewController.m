@@ -7,6 +7,7 @@
 //
 
 #import "TestViewController.h"
+#import "Log.h"
 
 @interface TestViewController ()
 
@@ -26,6 +27,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    _textView.delegate = self;
+    _textView.text = @"this is test ...";
+    LOG("");
 }
 
 - (void)didReceiveMemoryWarning

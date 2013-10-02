@@ -32,18 +32,18 @@
     {        
         UITextField *textField = (UITextField*)[self.view viewWithTag:100+i];
         textField.delegate = self;
-        [textField addPreviousNextDoneOnKeyboardWithTarget:self previousAction:@selector(previousClicked:) nextAction:@selector(nextClicked:) doneAction:@selector(doneClicked:)];
+//        [textField addPreviousNextDoneOnKeyboardWithTarget:self previousAction:@selector(previousClicked:) nextAction:@selector(nextClicked:) doneAction:@selector(doneClicked:)];
         
         //First textField
-        if (i == 0)
-        {
-            [textField setEnablePrevious:NO next:YES];
-        }
-        //Last textField
-        else if(i== numTextFields-1)
-        {
-            [textField setEnablePrevious:YES next:NO];
-        }
+//        if (i == 0)
+//        {
+//            [textField setEnablePrevious:NO next:YES];
+//        }
+//        //Last textField
+//        else if(i== numTextFields-1)
+//        {
+//            [textField setEnablePrevious:YES next:NO];
+//        }
     }
     
     if (!self.navigationController)

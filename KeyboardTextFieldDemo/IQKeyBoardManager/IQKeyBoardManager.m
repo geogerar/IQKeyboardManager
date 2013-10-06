@@ -39,7 +39,8 @@
  
  
  Begin Editing
- -------------------------------------------------           -------------------------------------------------   UITextFieldTextDidBeginEditingNotification  | --------> |          UIKeyboardWillShowNotification       |
+ -------------------------------------------------           -------------------------------------------------
+    UITextFieldTextDidBeginEditingNotification  | --------> |          UIKeyboardWillShowNotification       |
  -------------------------------------------------           -------------------------------------------------
                         ^------------------------Switch TextField--------^      ^
                         |                                                       |
@@ -105,7 +106,7 @@ static IQKeyBoardManager *kbManager;
     {
         kbManager.isEnabled = YES;
         /*Registering for keyboard notification*/
-         [[NSNotificationCenter defaultCenter] addObserver:kbManager selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+        [[NSNotificationCenter defaultCenter] addObserver:kbManager selector:@selector(keyboardWillShow:) name:UIKeyboardDidShowNotification object:nil];
         [[NSNotificationCenter defaultCenter] addObserver:kbManager selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
         
         /*Registering for textField notification*/

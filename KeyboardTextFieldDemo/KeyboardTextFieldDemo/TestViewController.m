@@ -8,6 +8,7 @@
 
 #import "TestViewController.h"
 #import "Log.h"
+#import "IQKeyBoardManager.h"
 
 @interface TestViewController ()
 
@@ -28,6 +29,10 @@
 {
     [super viewDidLoad];
     _textView.delegate = self;
+    if ([IQKeyBoardManager isEnabled]) {
+        LOG(@"enable");
+    }
+    
     _textView.text = @"this is test ...";
     LOG("");
 }
@@ -37,5 +42,6 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 
 @end

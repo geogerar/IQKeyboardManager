@@ -22,27 +22,9 @@
     // Override point for customization after application launch.
     
 
-#if 0
-    self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
-
-    //Case 1. UIViewController as rootViewController.
-    if (false)
-    {
-        self.window.rootViewController = self.viewController;
-    }
-    //Case 2. UINavigationController as rootViewController.
-    else
-    {
-        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self.viewController];
-        [navController.navigationBar setTintColor:[UIColor clearColor]];
-        self.window.rootViewController = navController;
-    }
-#else 
     TestViewController * testController = [[TestViewController alloc] initWithNibName:@"TestViewController" bundle:nil];
     self.window.rootViewController = testController;
     
-#endif
-
     [self.window makeKeyAndVisible];
     return YES;
 }
